@@ -1,0 +1,1 @@
+body{z-index:1}button#refresh{margin:20px;padding:10px 20px;font-size:14pt;font-family:Times New Roman;z-index:2;position:absolute}section{display:flex;justify-content:center}canvas,svg{z-index:1;border:1px solid}path[stroke=orange]{fill-opacity:0!important}.log-list{display:flex;flex-direction:column;margin:100px 0 0 20px}
