@@ -21,6 +21,8 @@ let sxr = 80,
     syd = 45,
     sy = 21;
 
+const precision = 7;
+
 function reduceAccuracy() {
     triangleR = (triangleR / 2);
     accurate = (accurate / 2);
@@ -91,10 +93,10 @@ function createSimplex(event) {
         if (rOfCenter < accurate) {
             cancelAnimationFrame(animation);
             reduceAccuracy();
-            if (accurate > 0.00001) {
+            if (accurate > 0.000001) {
                 startAnimation(x, y);
             } else {
-                console.log('Last accurate:' + x.toFixed(7))
+                console.log('Last accurate:' + rOfCenter.toFixed(precision))
             }
         }
     }
@@ -162,7 +164,7 @@ function createSimplex(event) {
 
 function updateLog(x, y) {
     const copy = logList.innerHTML;
-    logList.innerHTML += `<span>x: ${x}; y: ${y}</span>`;
+    logList.innerHTML += `<span>x: ${x.toFixed(precision)}; y: ${y.toFixed(precision)}</span>`;
 }
 
 function trRotation(dr, turned, south) {
